@@ -32,7 +32,7 @@
 
 .btn:hover:not(:disabled),
 .btn:focus:not(:disabled) {
-    background-color: hsl(200, 100%, 75%);
-    scale: 1.1;
+    background-color: #d8b4fe;
+    scale: 1.05;
     transition-duration: 500ms;
 }
