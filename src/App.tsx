@@ -96,7 +96,7 @@ function App() {
     })
 
     return (
-        <div className='max-w-[800px] flex flex-col gap-8 mx-auto my-0 items-center'>
+        <div className='max-w-[800px]  flex flex-col gap-8 mx-auto my-0 items-center'>
             <div className='mt-10 md:text-4xl text-center md:mt-20 '>
                 {text}
             </div>

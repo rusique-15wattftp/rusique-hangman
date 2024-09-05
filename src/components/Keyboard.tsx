@@ -43,7 +43,7 @@ function HangmanKeyboard({
     onAddGuessedLetters,
 }: KeyBoardProps) {
     return (
-        <div className='grid grid-cols-[repeat(auto-fit,_minmax(50px,_1fr))] gap-1    md:grid-cols-[repeat(auto-fit,_minmax(75px,_1fr))] md:gap-2'>
+        <div className='px-6 grid grid-cols-[repeat(auto-fit,_minmax(40px,_1fr))] gap-1 md:grid-cols-[repeat(auto-fit,_minmax(75px,_1fr))] md:gap-2'>
             {KEYS.map(key => {
                 const isActive = activeLetters.includes(key)
                 const isInactive = inactiveLetters.includes(key)
@@ -54,7 +54,9 @@ function HangmanKeyboard({
                         key={key}
                         className={`${styles.btn} ${
                             isActive ? styles.active : ''
-                        } ${isInactive ? styles.inactive : ''}`}>
+                        } ${
+                            isInactive ? styles.inactive : ''
+                        } shadow-lg`}>
                         {key}
                     </button>
                 )

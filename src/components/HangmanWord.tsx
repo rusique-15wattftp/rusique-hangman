@@ -19,8 +19,8 @@ function HangmanWord({
                         key={index}
                         className={`${
                             guessedLetters.includes(letter) || reveal
-                                ? 'text-black'
-                                : 'text-white'
+                                ? 'visible'
+                                : 'invisible'
                         } ${
                             !guessedLetters.includes(letter) && reveal
                                 ? 'text-red-500'
