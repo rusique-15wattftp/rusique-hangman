@@ -27,7 +27,7 @@ function App() {
     if (isWinner) {
         text = (
             <div className='text-green-700'>
-                You won! Refresh to start again
+                You won! Refresh or hit "Enter" to start again!
             </div>
         )
     }
@@ -35,7 +35,7 @@ function App() {
     if (isLoser) {
         text = (
             <div className='text-red-500'>
-                You lost! Refresh to start again
+                You lost! Refresh or hit "Enter" to start again!
             </div>
         )
     }
@@ -98,6 +98,9 @@ function App() {
     return (
         <div className='max-w-[800px] flex flex-col gap-8 mx-auto my-0 items-center'>
             <div className='text-4xl text-center mt-20'>{text}</div>
+            <div className='text-xl text-center italic'>
+                Hit "Enter" to change the word!
+            </div>
             <HangmanDrawing
                 numberOfGuesses={incorrectLetters.length}
             />
