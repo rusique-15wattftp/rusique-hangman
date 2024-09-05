@@ -97,8 +97,10 @@ function App() {
 
     return (
         <div className='max-w-[800px] flex flex-col gap-8 mx-auto my-0 items-center'>
-            <div className='text-4xl text-center mt-20'>{text}</div>
-            <div className='text-xl text-center italic'>
+            <div className='mt-10 md:text-4xl text-center md:mt-20 '>
+                {text}
+            </div>
+            <div className='md:text-xl text-center italic'>
                 Hit "Enter" to change the word!
             </div>
             <HangmanDrawing
@@ -109,7 +111,8 @@ function App() {
                 wordToGuess={wordToGuess}
                 reveal={isLoser}
             />
-            <div className='self-stretch px-8 py-8'>
+
+            <div className='self-stretch md:px-8 md:py-8'>
                 <Keyboard
                     activeLetters={guessedLetters.filter(letter =>
                         wordToGuess.includes(letter)

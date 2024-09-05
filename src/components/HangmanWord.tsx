@@ -10,12 +10,13 @@ function HangmanWord({
     reveal = false,
 }: HangmanWordProps) {
     return (
-        <div className='flex gap-3 text-8xl font-bold uppercase font-mono'>
+        <div className='flex gap-3 text-2xl md:text-8xl font-bold uppercase font-mono'>
             {wordToGuess.split('').map((letter, index) => (
                 <span
                     key={index}
-                    className='border-b-8 border-black hover:scale-110 duration-500'>
+                    className='border-b-2 md:border-b-8 border-black hover:scale-110 duration-500'>
                     <span
+                        key={index}
                         className={`${
                             guessedLetters.includes(letter) || reveal
                                 ? 'text-black'
